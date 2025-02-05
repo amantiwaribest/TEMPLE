@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ॐ नमः शिवाय</title>
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/3R3SJqSx/image.png">
+    <link rel="shortcut icon" type="image/png" href="https://i.postimg.cc/3R3SJqSx/image.png">
+    <link rel="apple-touch-icon" href="https://i.postimg.cc/3R3SJqSx/image.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Tiro+Devanagari&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #FFF5E6, #FFE5E5);
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            color: #333;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 22px 22px 10px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1),
+                       inset 0 0 30px rgba(139, 69, 19, 0.03);
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+            margin: 5px 10px 200px 10px; /* Decrease top margin */
+            position: relative;
+        }
+
+        /* Corner decorations */
+        .container::before,
+        .container::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            pointer-events: none;
+            opacity: 0.2;
+        }
+
+        .container::before {
+            top: 10px;
+            left: 10px;
+            border-top: 2px solid #8B4513;
+            border-left: 2px solid #8B4513;
+            border-radius: 10px 0 0 0;
+        }
+
+        .container::after {
+            bottom: 10px;
+            right: 10px;
+            border-bottom: 2px solid #8B4513;
+            border-right: 2px solid #8B4513;
+            border-radius: 0 0 10px 0;
+        }
+
+        h1 {
+            font-family: 'Tiro Devanagari', serif;
+            font-size: 25px;
+            color: #8B4513;
+            margin-bottom: 35px;
+            line-height: 1.4;
+            text-align: center;
+            padding: 12px 0;
+            animation: headerFadeIn 0.8s ease-out;
+        }
+
+        /* Header Animation */
+        @keyframes headerFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .date-container {
+            position: relative;
+            width: 100%;
+            margin-bottom: 18px;
+            background: linear-gradient(to bottom, #FFFFFF, #FFF8F3);
+            border-radius: 15px;
+            padding: 13px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(139, 69, 19, 0.1);
+        }
+
+        .date-container input[type="date"] {
+            width: 100%;
+            padding: 15px;
+            border-radius: 12px;
+            border: 2px solid rgba(139, 69, 19, 0.1);
+            font-size: 18px;
+            color: #333;
+            background: linear-gradient(to bottom, #FFFFFF, #FFF8F3);
+            cursor: pointer;
+        }
+
+        .date-container input[type="date"]:focus {
+            border-color: #8B4513;
+            box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1);
+            outline: none;
+        }
+
+        .date-container label {
+            position: absolute;
+            top: -25px;
+            left: 30px;
+            background: transparent;
+            padding: 0 0px;
+            margin-bottom: 30px;
+            font-size: 16px;
+            color: #8B4513;
+            font-weight: 500;
+        }
+
+        .btn, #generateButton {
+            width: 100%;
+            height: 42px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(45deg, #8B4513, #A0522D);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px 0;
+        }
+
+        .btn:hover, #generateButton:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.2);
+            background: linear-gradient(45deg, #A0522D, #8B4513);
+        }
+
+        .btn:active, #generateButton:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(139, 69, 19, 0.15);
+        }
+
+        .whatsapp-share-btn {
+            width: 100%;
+            height: 42px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(45deg, #8B4513, #A0522D);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 2px 5px rgba(139, 69, 19, 0.2);
+        }
+
+        .whatsapp-share-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+            background: linear-gradient(45deg, #A0522D, #8B4513);
+        }
+
+        .whatsapp-share-btn:active {
+            animation: whatsapp-click 0.3s ease;
+        }
+
+        @keyframes whatsapp-click {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+            }
+            50% {
+                transform: scale(0.95);
+                box-shadow: 0 0 24px rgba(139, 69, 19, 0.5);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+            }
+        }
+
+        textarea {
+            width: 100%;
+            padding: 12px;
+            height: 110px;
+            margin: 12px 0 5px 0;
+            border-radius: 12px;
+            border: 2px solid rgba(139, 69, 19, 0.1);
+            font-size: 15px;
+            color: #333;
+            resize: none;
+            line-height: 1.5;
+            background: linear-gradient(to bottom, #FFFFFF, #FFF8F3);
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            pointer-events: none;
+            -webkit-touch-callout: none;
+            -webkit-tap-highlight-color: transparent;
+            box-shadow: inset 0 2px 4px rgba(139, 69, 19, 0.03);
+        }
+
+        .btn-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 0 15px 0;
+            width: 100%;
+        }
+
+        /* Flower Petals Animation */
+        .petals {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .petal {
+            position: fixed;
+            width: 15px;
+            height: 15px;
+            background: linear-gradient(135deg, #FFE4E1, #FFDAB9);
+            border-radius: 15px 0;
+            box-shadow: 0 0 8px rgba(255, 228, 225, 0.3);
+            animation: falling 12s infinite linear;
+            opacity: 0;
+        }
+
+        .petal::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            border-radius: inherit;
+            transform: rotate(45deg);
+            opacity: 0.7;
+        }
+
+        .petal:nth-child(2n) {
+            width: 12px;
+            height: 12px;
+            animation-duration: 14s;
+            background: linear-gradient(135deg, #FFF0F5, #FFE4E1);
+        }
+
+        .petal:nth-child(3n) {
+            width: 18px;
+            height: 18px;
+            animation-duration: 16s;
+            background: linear-gradient(135deg, #FFDAB9, #FFF0F5);
+        }
+
+        .petal:nth-child(4n) {
+            width: 10px;
+            height: 10px;
+            animation-duration: 18s;
+            background: linear-gradient(135deg, #FFE4E1, #FFF5EE);
+        }
+
+        @keyframes falling {
+            0% {
+                transform: translate(0, -10%) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+            }
+            45% {
+                transform: translate(75px, 45vh) rotate(120deg);
+                opacity: 0.6;
+            }
+            55% {
+                transform: translate(-75px, 55vh) rotate(240deg);
+                opacity: 0.4;
+            }
+            90% {
+                opacity: 0.2;
+            }
+            100% {
+                transform: translate(0, 110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #2C1810;
+            padding: 20px 0 20px; /* Decrease top padding of footer */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .whatsapp-button {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            padding: 12px 24px;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .whatsapp-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .whatsapp-button i {
+            font-size: 24px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 35px;
+                margin: 10px 10px 250px 10px; /* Adjusted margin for mobile devices */
+            }
+
+            .whatsapp-button {
+                padding: 10px 20px;
+            }
+
+            .whatsapp-button i {
+                font-size: 22px;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 768px) {
+            .container {
+                padding: 35px;
+                margin: 10px 10px 250px 10px; /* Set margin for tablet sizes */
+            }
+            h1 {
+                font-size: 20px;
+            }
+            .btn {
+                width: 100%;
+                font-size: 14px;
+                padding: 10px;
+            }
+            textarea {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .container {
+                padding: 35px;
+                margin: 10px 10px 250px 10px; /* Set margin for larger screens */
+            }
+            h1 {
+                font-size: 22px;
+            }
+            .btn {
+                width: 100%;
+                font-size: 16px;
+                padding: 12px;
+            }
+            textarea {
+                font-size: 16px;
+                padding: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                margin: 10px 10px 250px 10px; /* Set margin for screens 480px and below */
+                padding: 30px; /* Remove padding for mobile devices */
+            }
+            h1 {
+                font-size: 18px;
+            }
+            .btn {
+                font-size: 12px;
+                padding: 8px;
+            }
+            textarea {
+                font-size: 12px;
+                padding: 8px;
+            }
+        }
+
+        /* Remove loading animation styles */
+        .loading-overlay,
+        .loading-content,
+        @keyframes fadeInOut,
+        @keyframes glowPulse {
+            display: none;
+        }
+
+        /* Button click animation */
+        .btn-click {
+            animation: btnClick 0.3s ease;
+        }
+
+        @keyframes btnClick {
+            0% { transform: scale(1); }
+            50% { transform: scale(0.95); }
+            100% { transform: scale(1); }
+        }
+
+        /* Sparkle Animation */
+        .sparkle {
+            position: absolute;
+            pointer-events: none;
+            width: 5px;
+            height: 5px;
+            background: #FFD700;
+            border-radius: 50%;
+            animation: sparkleAnim 0.8s linear forwards;
+            box-shadow: 0 0 2px #FFD700;
+        }
+
+        @keyframes sparkleAnim {
+            0% {
+                transform: scale(0) rotate(0deg);
+                opacity: 1;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: scale(0) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Text Area Animations */
+        @keyframes textFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes textGlow {
+            0% {
+                box-shadow: 0 0 5px rgba(139, 69, 19, 0.1);
+            }
+            50% {
+                box-shadow: 0 0 15px rgba(139, 69, 19, 0.2);
+            }
+            100% {
+                box-shadow: 0 0 5px rgba(139, 69, 19, 0.1);
+            }
+        }
+
+        .text-appear {
+            animation: textFadeIn 0.5s ease-out, textGlow 1.5s ease-in-out;
+        }
+
+        .fade-in {
+            animation: textFadeIn 0.5s ease-out;
+        }
+
+        /* Themed Icon Styles */
+        .themed-icon {
+            width: 30px;
+            height: 30px;
+            margin: 0 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .themed-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .responsive-image {
+            width: 100%; /* Set width to match container */
+            max-width: 400px; /* Set maximum width for the image */
+            height: auto;
+            margin: -25px 0; /* Decrease space below the spiritual image */
+            border: none; /* Remove border */
+            box-shadow: none; /* Remove shadow */
+        }
+
+        /* Sparkle Button Styles */
+        .sparkle-button {
+            position: relative;
+            padding: 16px 48px;
+            font-size: 18px;
+            background: linear-gradient(45deg, #4a90e2, #357abd);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.2s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .sparkle-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .sparkle {
+            position: absolute;
+            pointer-events: none;
+            animation: sparkleAnim 1s linear forwards;
+        }
+
+        .sparkle::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: currentColor;
+            clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+        }
+
+        @keyframes sparkleAnim {
+            0% {
+                transform: scale(0) rotate(0deg);
+                opacity: 1;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1) rotate(180deg) translate(var(--translate-x), var(--translate-y));
+                opacity: 0;
+            }
+        }
+
+        .footer-image {
+            width: 40px; /* Set width to match WhatsApp icon size */
+            height: 40px; /* Set height to match WhatsApp icon size */
+            margin-bottom: 5px; /* Decrease space below footer image */
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 5px; /* Decrease space below footer image */
+        }
+
+        .footer-credits {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 5px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .footer-credits-image {
+            width: 30px; /* Decrease image size further */
+            height: auto;
+            opacity: 0.8;
+        }
+
+        .footer-credits-text {
+            color: white; /* Change text color to white */
+            font-family: 'Courier New', Courier, monospace; /* Use command prompt font */
+            font-size: 10px; /* Decrease font size */
+            margin-top: 5px; /* Maintain space above credit text */
+        }
+    </style>
+</head>
+<body>
+    <div class="petals">
+        <div class="petal" style="left: 5%; animation-delay: 0s;"></div>
+        <div class="petal" style="left: 15%; animation-delay: -2s;"></div>
+        <div class="petal" style="left: 25%; animation-delay: -4s;"></div>
+        <div class="petal" style="left: 35%; animation-delay: -6s;"></div>
+        <div class="petal" style="left: 45%; animation-delay: -8s;"></div>
+        <div class="petal" style="left: 55%; animation-delay: -10s;"></div>
+        <div class="petal" style="left: 65%; animation-delay: -12s;"></div>
+        <div class="petal" style="left: 75%; animation-delay: -14s;"></div>
+        <div class="petal" style="left: 85%; animation-delay: -16s;"></div>
+        <div class="petal" style="left: 95%; animation-delay: -18s;"></div>
+        <!-- Additional petals for more density -->
+        <div class="petal" style="left: 10%; animation-delay: -3s;"></div>
+        <div class="petal" style="left: 20%; animation-delay: -5s;"></div>
+        <div class="petal" style="left: 30%; animation-delay: -7s;"></div>
+        <div class="petal" style="left: 40%; animation-delay: -9s;"></div>
+        <div class="petal" style="left: 50%; animation-delay: -11s;"></div>
+        <div class="petal" style="left: 60%; animation-delay: -13s;"></div>
+        <div class="petal" style="left: 70%; animation-delay: -15s;"></div>
+        <div class="petal" style="left: 80%; animation-delay: -17s;"></div>
+        <div class="petal" style="left: 90%; animation-delay: -19s;"></div>
+    </div>
+    <div class="image-container">
+        <img src="https://i.postimg.cc/BbzZFd1s/20250205-124915.png" alt="Spiritual Image" class="responsive-image" style="margin-bottom: 10px;">
+    </div>
+    <div class="container" style="margin-top: -25px;">
+        <h1><span>ॐ त्रयम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम् |<br></span><span>उर्वारुकमिव बन्धनान्मृत्तोर्मुक्षीय मामृतात् ||</span></h1>
+
+        <div class="date-container">
+            <input type="date" id="nativeDatePicker" onchange="updateDateInput()">
+            <label for="nativeDatePicker">तिथि चुनें</label>
+        </div>
+        
+        <button class="sparkle-button" id="generateButton">
+            संदेश बनाएँ
+        </button>
+        
+        <textarea id="generatedText1" readonly placeholder="यहां सामान्य संदेश दिखाई देगा"></textarea>
+        <div class="btn-group">
+            <button class="whatsapp-share-btn" onclick="shareOnWhatsApp(1)" title="Share on WhatsApp">
+                मैसेज शेयर करें
+            </button>
+        </div>
+        
+        <textarea id="generatedText2" readonly placeholder="यहां व्रत और त्योहार का संदेश दिखाई देगा"></textarea>
+        <div class="btn-group">
+            <button class="whatsapp-share-btn" onclick="shareOnWhatsApp(2)" title="Share on WhatsApp">
+                मैसेज शेयर करें
+            </button>
+        </div>
+    </div>
+
+    <!-- New Footer with WhatsApp Button -->
+    <div class="footer">
+        <div class="footer-content">
+            <img src="https://i.postimg.cc/3R3SJqSx/image.png" alt="Footer Image" class="footer-image">
+            <a href="https://wa.me/919648620970?text=Hi%20I%20need%20a%20help" class="whatsapp-button" target="_blank" style="margin-top: 10px; margin-bottom: 20px;">
+                <i class="fab fa-whatsapp"></i>
+                Need Help?
+            </a>
+            <div class="footer-credits">
+                <img src="https://i.postimg.cc/5NydtTH0/f79c2a17-465c-4eb3-a6f9-f34ea4e5114f.gif" alt="Footer Credits Image" class="footer-credits-image">
+                <span class="footer-credits-text">Crafted with Devotion, Blending Tradition and Technology</span>
+                <img src="https://i.postimg.cc/5NydtTH0/f79c2a17-465c-4eb3-a6f9-f34ea4e5114f.gif" alt="Footer Credits Image" class="footer-credits-image">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set current date on page load
+        window.onload = function() {
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const day = String(today.getDate()).padStart(2, '0');
+            const currentDate = `${year}-${month}-${day}`;
+            
+            document.getElementById('nativeDatePicker').value = currentDate;
+            updateDateInput(); // Update the date format display
+        };
+
+        function updateDateInput() {
+            const dateInput = document.getElementById("nativeDatePicker");
+            const label = document.querySelector("label[for='nativeDatePicker']");
+            label.textContent = "तिथि चुनें";
+        }
+
+        const hindiMonths = {
+            "January": "जनवरी",
+            "February": "फरवरी",
+            "March": "मार्च",
+            "April": "अप्रैल",
+            "May": "मई",
+            "June": "जून",
+            "July": "जुलाई",
+            "August": "अगस्त",
+            "September": "सितंबर",
+            "October": "अक्टूबर",
+            "November": "नवंबर",
+            "December": "दिसंबर"
+        };
+
+        const hindiWeekdays = {
+            "Monday": "सोमवार",
+            "Tuesday": "मंगलवार",
+            "Wednesday": "बुधवार",
+            "Thursday": "गुरुवार",
+            "Friday": "शुक्रवार",
+            "Saturday": "शनिवार",
+            "Sunday": "रविवार"
+        };
+
+        async function generateVersion1Message() {
+            const inputDate = document.getElementById("nativeDatePicker").value;
+
+            if (!inputDate) {
+                alert("कृपया तारीख चुनें");
+                return;
+            }
+
+            const today = new Date(inputDate);
+            const formattedDate = today.getDate();
+            const month = today.toLocaleString('en-US', { month: 'long' });
+            const year = today.getFullYear();
+
+            const weekday = today.toLocaleString('en-US', { weekday: 'long' });
+            const hindiMonth = hindiMonths[month];
+            const hindiWeekday = hindiWeekdays[weekday];
+
+            const formattedMessage = 
+            `*🙏🌹जय श्री बाबा बालेश्वर नाथ🙏*  
+*🙏श्री बाबा बालेश्वर नाथ जी महाराज का बाल भोग आरती श्रृंगार दर्शन*🔱 *${formattedDate} ${hindiMonth} ${year} ( ${hindiWeekday} ) बलिया, उत्तर-प्रदेश*🙏🏻`;
+
+            const textArea = document.getElementById("generatedText1");
+            textArea.value = formattedMessage.trim(); // Set the message directly
+            textArea.classList.remove('fade-in'); // Remove fade-in class
+            void textArea.offsetWidth; // Trigger reflow
+            textArea.classList.add('fade-in'); // Re-add fade-in class
+        }
+
+        async function generateVersion2Message() {
+            const inputDate = document.getElementById("nativeDatePicker").value;
+
+            if (!inputDate) {
+                alert("कृपया तारीख चुनें");
+                return;
+            }
+
+            const today = new Date(inputDate);
+            const formattedDate = today.getDate();
+            const month = today.toLocaleString('en-US', { month: 'long' });
+            const year = today.getFullYear();
+
+            const weekday = today.toLocaleString('en-US', { weekday: 'long' });
+            const hindiMonth = hindiMonths[month];
+            const hindiWeekday = hindiWeekdays[weekday];
+
+            const specialDates = {
+                "2024-12-29": "शनि प्रदोष व्रत",
+                "2024-12-28": "शनि प्रदोष व्रत",
+                "2024-12-30": "सोमवती अमावस्या",
+                "2024-12-26": "विशेष सफला एकादशी",
+                "2025-01-10": "पौष पुत्रदा एकादशी",
+                "2025-01-11": "प्रदोष व्रत (शुक्ल)",
+                "2025-01-13": "पौष पूर्णिमा व्रत",
+                "2025-01-14": "पोंगल, उत्तरायण, मकर संक्रांति",
+                "2025-01-17": "संकष्टी चतुर्थी",
+                "2025-01-25": "षटतिला एकादशी",
+                "2025-01-27": "प्रदोष व्रत (कृष्ण), मासिक शिवरात्रि",
+                "2025-01-29": "माघ अमावस्या",
+
+                "2025-02-01": "विनायक चतुर्थी",
+                "2025-02-02": "बसंत पंचमी",
+                "2025-02-04": "नर्मदा जयंती",
+                "2025-02-08": "जया एकादशी",
+                "2025-02-09": "प्रदोष व्रत",
+                "2025-02-12": "माघ पूर्णिमा व्रत, कुंभ संक्रांति, गुरु रविदास जयंती",
+                "2025-02-13": "फाल्गुन माह शुरू",
+                "2025-02-16": "द्विजप्रिय संकष्टी चतुर्थी",
+                "2025-02-20": "शबरी जयंती",
+                "2025-02-21": "जानकी जयंती",
+                "2025-02-24": "विजया एकादशी",
+                "2025-02-25": "प्रदोष व्रत",
+                "2025-02-26": "महाशिवरात्रि",
+                "2025-02-27": "फाल्गुन अमावस्या",
+
+                "2025-03-01": "फुलैरा दूज, रामकृष्ण जयंती",
+                "2025-03-03": "विनायक चतुर्थी",
+                "2025-03-10": "आमलकी एकादशी",
+                "2025-03-11": "प्रदोष व्रत",
+                "2025-03-13": "होलिका दहन, फाल्गुन पूर्णिमा व्रत",
+                "2025-03-14": "होली, मीन संक्रांति, चंद्र ग्रहण",
+                "2025-03-15": "चैत्र माह शुरू",
+                "2025-03-16": "होली भाई दूज",
+                "2025-03-17": "भालचंद्र संकष्टी चतुर्थी",
+                "2025-03-19": "रंग पंचमी",
+                "2025-03-21": "शीतला सप्तमी",
+                "2025-03-22": "शीतला अष्टमी, बसोडा",
+                "2025-03-25": "पापमोचिनी एकादशी",
+                "2025-03-27": "मासिक शिवरात्रि, प्रदोष व्रत",
+                "2025-03-29": "चैत्र अमावस्या, सूर्य ग्रहण",
+                "2025-03-30": "हिंदू नववर्ष शुरू, चैत्र नवरात्रि, गुड़ी पड़वा",
+                "2025-03-31": "गणगौर पूजा",
+
+                "2025-04-01": "विनायक चतुर्थी",
+                "2025-04-06": "राम नवमी, रवि पुष्य योग",
+                "2025-04-08": "कामदा एकादशी",
+                "2025-04-10": "प्रदोष व्रत",
+                "2025-04-12": "हनुमान जयंती, चैत्र पूर्णिमा व्रत",
+                "2025-04-13": "वैशाख शुरू",
+                "2025-04-14": "मेष संक्रांति",
+                "2025-04-16": "विकट संकष्टी चतुर्थी",
+                "2025-04-24": "वरुथिनी एकादशी",
+                "2025-04-25": "प्रदोष व्रत",
+                "2025-04-26": "मासिक शिवरात्रि",
+                "2025-04-27": "वैशाख अमावस्या",
+                "2025-04-29": "परशुराम जयंती",
+                "2025-04-30": "अक्षय तृतीया",
+
+                "2025-05-01": "विनायक चतुर्थी",
+                "2025-05-02": "शंकराचार्य जयंती, सूरदास जयंती, रामानुज जयंती",
+                "2025-05-03": "गंगा सप्तमी",
+                "2025-05-05": "सीता नवमी",
+                "2025-05-08": "मोहिनी एकादशी",
+                "2025-05-09": "प्रदोष व्रत",
+                "2025-05-11": "नरसिंह जयंती",
+                "2025-05-12": "बुद्ध पूर्णिमा, वैशाख पूर्णिमा व्रत",
+                "2025-05-13": "नारद जयंती, ज्येष्ठा माह सुरू",
+                "2025-05-15": "वृषभ संक्रांति",
+                "2025-05-16": "एकदंत संकष्टी चतुर्थी",
+                "2025-05-23": "अपरा एकादशी",
+                "2025-05-24": "शनि प्रदोष व्रत",
+                "2025-05-25": "मासिक शिवरात्रि",
+                "2025-05-26": "वट सावित्री व्रत",
+                "2025-05-27": "शनि जयंती, ज्येष्ठ अमावस्या",
+                "2025-05-30": "विनायक चतुर्थी",
+
+                "2025-06-04": "महेश नवमी",
+                "2025-06-05": "गंगा दशहरा",
+                "2025-06-06": "निर्जला एकादशी",
+                "2025-06-08": "प्रदोष व्रत",
+                "2025-06-10": "व्रत सावित्री पूर्णिमा व्रत",
+                "2025-06-11": "कबीरदास जयंती, ज्येष्ठ पूर्णिमा",
+                "2025-06-12": "आषाढ़ माह शुरू",
+                "2025-06-14": "कृष्ण पिंगल संकष्टी चतुर्थी",
+                "2025-06-15": "मिथुन संक्रांति",
+                "2025-06-21": "योगिनी एकादशी",
+                "2025-06-23": "प्रदोष व्रत, मासिक शिवरात्रि",
+                "2025-06-25": "आषाढ़ अमावस्या",
+                "2025-06-26": "आषाढ़ नवरात्रि",
+                "2025-06-27": "जगन्नाथ रथ यात्रा",
+                "2025-06-28": "विनायक चतुर्थी",
+
+                "2025-07-06": "देवशयनी एकादशी",
+                "2025-07-08": "प्रदोष व्रत",
+                "2025-07-10": "कोकिला व्रत, गुरु पूर्णिमा व्रत, आषाढ़ पूर्णिमा",
+                "2025-07-11": "सावन शुरू",
+                "2025-07-14": "पहला सावन सोमवार, गजानन संकष्टी चतुर्थी",
+                "2025-07-15": "पहला मंगला गौरी व्रत",
+                "2025-07-16": "कर्क संक्रांति",
+                "2025-07-21": "दूसरा सावन सोमवार, कामिक एकादशी",
+                "2025-07-22": "प्रदोष व्रत",
+                "2025-07-23": "सावन शिवरात्रि",
+                "2025-07-24": "हरियाली अमावस्या, सावन अमावस्या, गुरु पुष्य योग",
+                "2025-07-27": "हरियाली तीज",
+                "2025-07-28": "सावन तीसरा सोमवार, विनायक चतुर्थी",
+                "2025-07-29": "नाग पंचमी",
+                "2025-07-30": "कल्कि जयंती",
+                "2025-07-31": "तुलसीदास जयंती",
+
+                "2025-08-04": "चौथा सावन सोमवार व्रत",
+                "2025-08-05": "सावन पुत्रदा एकादशी",
+                "2025-08-06": "प्रदोष व्रत",
+                "2025-08-08": "हयग्रीव जयंती, वरलक्ष्मी व्रत",
+                "2025-08-09": "रक्षाबंधन, सावन पूर्णिमा व्रत",
+                "2025-08-10": "भाद्रपद शुरू",
+                "2025-08-12": "कजरी तीज, बहुला चौथ, संकष्टी चतुर्थी",
+                "2025-08-15": "जन्माष्टमी",
+                "2025-08-16": "दही हांडी",
+                "2025-08-17": "सिंह संक्रांति",
+                "2025-08-19": "अजा एकादशी",
+                "2025-08-20": "प्रदोष व्रत",
+                "2025-08-21": "पर्यूषण पर्व शुरू, गुरु पुष्य योग",
+                "2025-08-23": "भाद्रपद अमावस्या, पोला",
+                "2025-08-25": "वराह जयंती",
+                "2025-08-26": "हरतालिका तीज",
+                "2025-08-27": "गणेश चतुर्थी",
+                "2025-08-28": "ऋषि पंचमी",
+                "2025-08-31": "राधा अष्टमी, महालक्ष्मी व्रत शुरू",
+
+                "2025-09-03": "परिवर्तिनी एकादशी",
+                "2025-09-04": "वामन जयंती",
+                "2025-09-05": "ओणम, प्रदोष व्रत",
+                "2025-09-06": "गणेश विसर्जन, अनंत चतुर्दशी",
+                "2025-09-07": "भाद्रपद पूर्णिमा व्रत, चंद्र ग्रहण",
+                "2025-09-08": "पितृ पक्ष शुरू",
+                "2025-09-10": "विघ्नराज संकष्टी चतुर्थी",
+                "2025-09-14": "जीवित्पुत्रिका व्रत",
+                "2025-09-17": "एकादशी श्राद्ध, इंदिरा एकादशी, कन्या संक्रांति",
+                "2025-09-18": "गुरु पुष्य योग",
+                "2025-09-19": "मासिक शिवरात्रि, प्रदोष व्रत",
+                "2025-09-21": "सर्व पितृ अमावस्या",
+                "2025-09-22": "शारदीय नवरात्रि शुरू, घटस्थापना",
+                "2025-09-25": "विनायक चतुर्थी",
+
+                "2025-10-02": "दशहरा, विजयादशमी",
+                "2025-10-03": "पापांकुशा एकादशी",
+                "2025-10-04": "शनि प्रदोष व्रत",
+                "2025-10-06": "कोजागर पूजा, शरद पूर्णिमा",
+                "2025-10-07": "वाल्मीकि जयंती, मीराबाई जयंती",
+                "2025-10-08": "कार्तिक माह शुरू",
+                "2025-10-10": "करवा चौथ, संकष्टी चतुर्थी",
+                "2025-10-13": "अहोई अष्टमी",
+                "2025-10-17": "रमा एकादशी, तुला संक्रांति",
+                "2025-10-18": "शनि प्रदोष व्रत, धनतेरस, यम दीपम",
+                "2025-10-20": "नरक चतुर्दशी, लक्ष्मी पूजा, दिवाली",
+                "2025-10-21": "कार्तिक अमावस्या",
+                "2025-10-22": "गोवर्धन पूजा",
+                "2025-10-23": "भाई दूज",
+                "2025-10-25": "विनायक चतुर्थी",
+                "2025-10-27": "छठ पूजा",
+                "2025-10-31": "अक्षय नवमरी",
+
+                "2025-11-01": "देवउठनी एकादशी",
+                "2025-11-02": "तुलसी विवाह",
+                "2025-11-03": "प्रदोष व्रत",
+                "2025-11-04": "बैकुंठ चतुर्दशी, मणिकर्णिका स्नान",
+                "2025-11-05": "देव दिवाली, गुरु नानक जयंती, कार्तिक पूर्णिमा",
+                "2025-11-06": "मार्गशीर्ष माह शुरू",
+                "2025-11-08": "गणाधिप संकष्टी चतुर्थी",
+                "2025-11-12": "कालभैरव जयंती",
+                "2025-11-15": "उत्पन्ना एकादशी",
+                "2025-11-16": "वृश्चिक संक्रांति",
+                "2025-11-17": "प्रदोष व्रत",
+                "2025-11-18": "मासिक शिवरात्रि",
+                "2025-11-20": "मार्गशीर्ष अमावस्या",
+                "2025-11-24": "विनायक चतुर्थी",
+                "2025-11-25": "विवाह पंचमी",
+
+                "2025-12-01": "मोक्षदा एकादशी, गीता जयंती",
+                "2025-12-02": "प्रदोष व्रत",
+                "2025-12-04": "अन्नपूर्णा जयंती, दत्तात्रेय जयंती, मार्गशीर्ष पूर्णिमा",
+                "2025-12-05": "पौष माह शुरू",
+                "2025-12-07": "अखुरथ संकष्टी चतुर्थी",
+                "2025-12-15": "सफला एकादशी",
+                "2025-12-16": "धनु संक्रांति",
+                "2025-12-17": "प्रदोष व्रत",
+                "2025-12-19": "पौष अमावस्या",
+                "2025-12-24": "विनायक चतुर्थी",
+                "2025-12-27": "गुरु गोविंद सिंह जयंती",
+                "2025-12-30": "पौष पुत्रदा एकादशी",
+                "2025-12-31": "बैकुंठ एकादशी",
+
+            };
+
+            const selectedDate = `${year}-${(monthNumber(today.getMonth()) + 1).toString().padStart(2, '0')}-${formattedDate.toString().padStart(2, '0')}`;
+
+            let vratMessage = specialDates[selectedDate];
+
+            if (vratMessage) {
+                if (!vratMessage.includes("व्रत")) {
+                    vratMessage += " व्रत";
+                }
+                vratMessage = `विशेष ${vratMessage}`;
+
+                const formattedMessage = 
+                `*🙏🌹जय श्री बाबा बालेश्वर नाथ🙏*  
+*🙏श्री बाबा बालेश्वर नाथ जी महाराज का बाल भोग आरती श्रृंगार दर्शन*🔱 *${formattedDate} ${hindiMonth} ${year} ${vratMessage} ( ${hindiWeekday} ) बलिया, उत्तर-प्रदेश*🙏🏻`;
+
+                const textArea = document.getElementById("generatedText2");
+                textArea.value = formattedMessage.trim(); // Set the message directly
+                textArea.classList.remove('fade-in'); // Remove fade-in class
+                void textArea.offsetWidth; // Trigger reflow
+                textArea.classList.add('fade-in'); // Re-add fade-in class
+            } else {
+                const noVratMessage = 
+                `कोई विशेष व्रत नहीं`;
+
+                const textArea = document.getElementById("generatedText2");
+                textArea.value = noVratMessage.trim(); // Set the message directly
+                textArea.classList.remove('fade-in'); // Remove fade-in class
+                void textArea.offsetWidth; // Trigger reflow
+                textArea.classList.add('fade-in'); // Re-add fade-in class
+            }
+        }
+
+        function monthNumber(monthIndex) {
+            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            return months.indexOf(months[monthIndex]);
+        }
+
+        function shareOnWhatsApp(version) {
+            const text = document.getElementById(`generatedText${version}`).value;
+            if (text.trim() === '') {
+                alert('Please generate the output first!');
+                return;
+            }
+            const encodedText = encodeURIComponent(text);
+            const whatsappUrl = `https://wa.me/919648620970?text=${encodedText}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Add sparkle effect
+        function createSparkle(x, y) {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.style.left = x + 'px';
+            sparkle.style.top = y + 'px';
+            
+            setTimeout(() => {
+                sparkle.remove();
+            }, 800);
+        }
+
+        function createSparkles(button) {
+            const rect = button.getBoundingClientRect();
+            const numSparkles = 18;
+            
+            for (let i = 0; i < numSparkles; i++) {
+                setTimeout(() => {
+                    const x = rect.left + Math.random() * rect.width;
+                    const y = rect.top + Math.random() * rect.height;
+                    createSparkle(x, y);
+                }, i * 40);
+            }
+        }
+
+        let isTyping = false; // Flag to track typing state
+
+        document.getElementById("generateButton").addEventListener("click", async () => {
+            if (isTyping) return; // Prevent multiple clicks during typing
+
+            const button = document.getElementById("generateButton");
+            button.disabled = true; // Disable the button immediately
+            createSparkles(button);
+            isTyping = true; // Set typing flag to true
+
+            const inputDate = document.getElementById("nativeDatePicker").value;
+
+            if (!inputDate) {
+                alert("कृपया तारीख चुनें");
+                button.disabled = false; // Re-enable the button
+                isTyping = false; // Reset typing flag
+                return;
+            }
+
+            // Generate messages
+            await generateVersion1Message();
+            await generateVersion2Message();
+
+            button.disabled = false; // Re-enable the button after both messages are generated
+            isTyping = false; // Reset typing flag
+        });
+
+        // Add click animation to share buttons
+        document.querySelectorAll('.whatsapp-share-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                addClickAnimation(this);
+            });
+        });
+
+        // Prevent text selection and copying in textareas
+        document.querySelectorAll('textarea').forEach(textarea => {
+            // Disable all events that might lead to selection
+            textarea.addEventListener('selectstart', e => e.preventDefault());
+            textarea.addEventListener('mousedown', e => e.preventDefault());
+            textarea.addEventListener('touchstart', e => e.preventDefault());
+            textarea.addEventListener('contextmenu', e => e.preventDefault());
+            textarea.addEventListener('copy', e => e.preventDefault());
+            textarea.addEventListener('cut', e => e.preventDefault());
+            textarea.addEventListener('paste', e => e.preventDefault());
+            textarea.addEventListener('keydown', e => {
+                if (e.ctrlKey || e.metaKey) {
+                    e.preventDefault();
+                }
+            });
+            
+            // Make textarea read-only and disable selection
+            textarea.setAttribute('readonly', 'readonly');
+            textarea.style.webkitUserSelect = 'none';
+            textarea.style.mozUserSelect = 'none';
+            textarea.style.msUserSelect = 'none';
+            textarea.style.userSelect = 'none';
+            textarea.style.webkitTouchCallout = 'none';
+            textarea.style.webkitTapHighlightColor = 'transparent';
+            
+            // Prevent focus
+            textarea.addEventListener('focus', (e) => {
+                textarea.blur();
+            });
+        });
+
+        // Additional protection for the whole document
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('selectstart', function(e) {
+            if (e.target.tagName === 'TEXTAREA') {
+                e.preventDefault();
+            }
+        });
+
+        function addClickAnimation(button) {
+            button.classList.add('btn-click');
+            setTimeout(() => button.classList.remove('btn-click'), 300);
+        }
+
+        const sparkleButton = document.querySelector('.sparkle-button');
+        
+        sparkleButton.addEventListener('click', function(e) {
+            // Create multiple sparkles
+            for (let i = 0; i < 40; i++) {
+                createSparkle(this);
+            }
+
+            // Create more sparkles over time
+            let count = 0;
+            const interval = setInterval(() => {
+                for (let i = 0; i < 8; i++) {
+                    createSparkle(this);
+                }
+                count++;
+                if (count >= 6) clearInterval(interval);
+            }, 150);
+        });
+
+        function createSparkle(button) {
+            const sparkle = document.createElement('div');
+            sparkle.classList.add('sparkle');
+            
+            // Random position within button
+            const x = Math.random() * button.offsetWidth;
+            const y = Math.random() * button.offsetHeight;
+            
+            // Random size between 4px and 8px
+            const size = Math.random() * 4 + 4;
+            sparkle.style.width = size + 'px';
+            sparkle.style.height = size + 'px';
+            
+            // Random color
+            const hue = 0; // Set hue to 0 for white color
+            const lightness = Math.random() * 5 + 95; // Very bright lightness closer to white
+            sparkle.style.color = `hsl(${hue}, 100%, ${lightness}%)`;
+            
+            // Random movement direction
+            const angle = Math.random() * 360;
+            const distance = Math.random() * 50 + 20;
+            sparkle.style.setProperty('--translate-x', `${Math.cos(angle) * distance}px`);
+            sparkle.style.setProperty('--translate-y', `${Math.sin(angle) * distance}px`);
+            
+            sparkle.style.left = x + 'px';
+            sparkle.style.top = y + 'px';
+            
+            // Random delay and rotation
+            sparkle.style.animationDelay = Math.random() * 300 + 'ms';
+            sparkle.style.transform = `rotate(${Math.random() * 360}deg)`;
+            
+            button.appendChild(sparkle);
+            
+            // Remove sparkle after animation
+            sparkle.addEventListener('animationend', () => sparkle.remove());
+        }
+    </script>
+</body>
+</html>
